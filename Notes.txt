@@ -1,0 +1,57 @@
+//Class
+
+class Person{
+    constructor(name,age,gender,salary){
+        this.name=name;
+        this.age=age;
+        this.gender=gender;
+        this.salary=salary;
+    }
+}
+var person1 = new Person("Joe",20,"Male",25000);
+var person2 = new Person("John",30,"Male",40000);
+var person3 = new Person("Jack",40,"Male",60000);
+console.log(person1.name);
+console.log(person1.age);
+console.log(person1.gender);
+console.log(person1.salary);
+console.log(this);
+console.log(`The Person Names are 
+"Person 1 ":${person1.name}
+"Person 2 ":${person2.name}
+"Person 3 ":${person3.name}`)
+
+//Class with Methods
+class Car{
+    constructor(brand,color){
+        this.brand = brand;
+        this.color = color;
+    }
+    drive(){
+        console.log("Driving the Car");
+    }
+    brake(){
+        console.log("Applying the brake");
+    }
+}
+var car1 = new Car("Audi","Black");
+car1.drive();
+car1.brake();
+console.log(car1.color);
+console.log(car1.brand);
+
+Setters and Getters
+class Car{
+    constructor(power){
+        this._power=power;
+        console.log(power);
+    }
+    set power(n){
+        return `${this._power=n}`
+    }
+    get power(){
+         return `${this._power}hp`;
+    }
+}
+var car = new Car(400);
+console.log(car.power);
