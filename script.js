@@ -92,30 +92,22 @@ console.log(`The Person Names are
 //Question 4 : write a class to calculate the uber price.
 
 class Uber{
-    constructor(km,amount){
+    constructor(km,amount=20){
         this._km=km;
-        this._amount=amount;
-    }
-    set amount(amount){
         this._amount=amount;
     }
     get amount(){
         return this._amount;
     }
-    set km(km=5){
+    set km(km){
         this._km=km;
     }
     get km(){
-        return this._km;
-    }
-    get uberPrice(){
-        return this.amount * this.km;
+        return this._km*this.amount;
     }
 }
-let uber = new Uber(5,20);
+let uber = new Uber(5,10);
 console.log(uber.amount);
 console.log(uber.km);
-console.log(uber.amount="20");
-console.log(uber.km="10");
-console.log(uber.uberPrice);
+
 
