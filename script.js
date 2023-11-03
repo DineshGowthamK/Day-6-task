@@ -96,18 +96,19 @@ class Uber{
         this._km=km;
         this._amount=amount;
     }
-    get amount(){
-        return this._amount;
-    }
-    set km(km){
-        this._km=km;
-    }
-    get km(){
-        return this._km*this.amount;
+    // get amount(){
+    //     return this._amount;
+    // }
+    // set km(km){
+    //     this._km=km;
+    // }
+    get Amount(){
+        return this._km*this._amount;
     }
 }
 let uber = new Uber(5,10);
-console.log(uber.amount);
-console.log(uber.km);
+let uber1 = new Uber(10);
+console.log(uber.Amount);
+console.log(uber1.Amount);
 
 
